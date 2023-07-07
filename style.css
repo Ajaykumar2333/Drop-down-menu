@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  background: #8c52ff;
+}
+ul li {
+  display: inline-block;
+  position: relative;
+}
+
+ul li a {
+  display: block;
+  padding: 20px 25px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+ul li .dropdown li {
+  display: block;
+}
+ul li .dropdown {
+  width: 100%;
+  background: #8c52ff;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+ul li a:hover {
+  background: #6d30e9;
+}
+
+ul li:hover .dropdown {
+  display: block;
+ 
+  /* This property is used in the ul li:hover ul.dropdown selector. It specifies that when the user hovers over the parent <li> element, the nested <ul> element with the class .dropdown should be displayed as a block-level element. This makes the dropdown menu visible and allocates the necessary space in the layout. */
+}
+
+/* CSS for the dropdown symbol */
+.drop > a::after {
+  content: "\25BC"; /* Unicode for a downward-pointing triangle */
+  margin-left: 10px; /* Adjust the spacing between the text and symbol */
+  font-size: 10px;
+}
